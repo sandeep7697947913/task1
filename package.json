@@ -7,11 +7,11 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "apiserver" : "node expressserver.js",
+    "apiserver": "node expressserver.js",
     "e2e": "ng e2e",
-    "ts" : "npm run apiserver || npm run start",
-    "both" : "node expressserver.js && ng-serve",
-    "con" :  "concurrently \"expressserver.js\" \"command2 arg\""
+    "ts": "npm run apiserver || npm run start",
+    "both": "node expressserver.js && ng-serve",
+    "con": "concurrently \"npm run apiserver\" \" npm run start\""
   },
   "private": true,
   "dependencies": {
@@ -24,6 +24,7 @@
     "@angular/platform-browser-dynamic": "~8.2.13",
     "@angular/router": "~8.2.13",
     "body-parser": "^1.19.0",
+    "concurrently": "^5.0.0",
     "cors": "^2.8.5",
     "ejs": "^2.6.2",
     "express": "^4.17.1",

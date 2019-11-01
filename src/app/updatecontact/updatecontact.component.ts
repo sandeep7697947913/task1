@@ -9,7 +9,7 @@ import { Categories } from '../categories';
   styleUrls: ['./updatecontact.component.css']
 })
 export class UpdatecontactComponent implements OnInit {
-  contact: {};
+  contact;
   categories = new Categories().categories;
   constructor(
     private router:Router,
