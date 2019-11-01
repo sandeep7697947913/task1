@@ -12,6 +12,4 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/api", require("./router/api"));
 
-app.listen(7000, function() {
-	console.log("Contact app listening on port 7000 !");
-});
+module.exports = { app }

@@ -7,7 +7,11 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "apiserver" : "node expressserver.js",
+    "e2e": "ng e2e",
+    "ts" : "npm run apiserver || npm run start",
+    "both" : "node expressserver.js && ng-serve",
+    "con" :  "concurrently \"expressserver.js\" \"command2 arg\""
   },
   "private": true,
   "dependencies": {
