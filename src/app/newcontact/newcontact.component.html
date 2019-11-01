@@ -5,19 +5,24 @@
     <div class="col-6">
         <form (ngSubmit)="onSubmit()">
             <div class="form-group">
+                <label for="">First Name</label>
                 <input type="text" [(ngModel)]="contact.firstName" name="firstName" class="form-control" placeholder="First Name">
             </div>
             
             <div class="form-group">
+                    <label for="">Middle Name</label>
                 <input type="text"  [(ngModel)]="contact.middleName" name="middleName" class="form-control" placeholder="Middle Name">
             </div>
             <div class="form-group">
+                    <label for="">Last Name</label>
                 <input type="text"  [(ngModel)]="contact.sirName" name="sirName" class="form-control" placeholder="Last Name">
             </div>
             <div class="form-group">
+                    <label for="">Number</label>
                 <input type="number"  [(ngModel)]="contact.contact" name="contact" class="form-control" placeholder="phone number">
             </div>
             <div class="form-group">
+                    <label for="">Categories</label>
                 <select [(ngModel)]="contact.category" class="form-control" name="category" id="">
                     <option  *ngFor="let category of categories">{{category}}</option>
                 </select>
