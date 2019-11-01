@@ -1,0 +1,25 @@
+<div class="col-6">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <input type="text" [(ngModel)]="contact.firstName" name="firstName" class="form-control" placeholder="First Name">
+        </div>
+        
+        <div class="form-group">
+            <input type="text"  [(ngModel)]="contact.middleName" name="middleName" class="form-control" placeholder="Middle Name">
+        </div>
+        <div class="form-group">
+            <input type="text"  [(ngModel)]="contact.sirName" name="sirName" class="form-control" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+            <input type="number"  [(ngModel)]="contact.contact" name="contact" class="form-control" placeholder="phone number">
+        </div>
+        <div class="form-group">
+                <select [(ngModel)]="contact.category" class="form-control" name="category" id="">
+                    <option  *ngFor="let category of categories">{{category}}</option>
+                </select>
+            </div>
+        <input type="submit"  class="btn btn-success" value="Update Contact">
+        <input type="button" (click)="delete()" class="ml-3 btn btn-success" value="Delete Contact">
+    </form>
+</div>
+
